@@ -38,7 +38,19 @@ console.log(passStudent)
 // find method
 
 const numbers = [1, 3, 4, 6, 8];
-
 const firstEven = numbers.find(num => num % 2 === 0);
-
 console.log(firstEven); // 4
+
+// Find the first name in the array that has more than 5 letters.
+const names = ["Ram", "Hari", "Krishna", "Shyam"];
+const result = names.find(name => name.length > 5)
+console.log(result)
+
+
+// reduce method
+
+const dollar = [1,2,3,4,5];
+
+const totttal = numbers.reduce((acc,curr)=> acc+curr , 0);
+
+console.log(totttal);

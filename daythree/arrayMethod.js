@@ -1,15 +1,15 @@
 // // push
 let fullNames = ["ram", "hari"];
 
- fullNames.push("orange");
+fullNames.push("orange") ;
+console.log(fullNames);
 
-console.log(fullNames)
+ 
+//  pop method
 
-
-// let fruits = ["apple", "banana"];
-// let removedFruits = fruits.pop();
-// console.log(removedFruits)
-
+let fruits = ["apple", "banana"];
+fruits.pop("apple");
+console.log(fruits);
 
 // map method
 

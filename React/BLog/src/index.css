@@ -1,0 +1,36 @@
+.card{
+  border: 1px solid #db0b0b;
+  padding: 10px;
+  width: 300px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  background: lightcyan;
+}
+.btn{
+  background: blue;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn:hover{
+  background: red;
+}
+
+.dislikeBtn{
+  margin-left: 10px;
+  background: blue;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin-top: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dislikeBtn:hover{
+  background: red;
+}

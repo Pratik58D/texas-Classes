@@ -8,15 +8,20 @@ import "./about.css"
 //   }
 
 
-const About = ({person}) => {
+const About = ({age}) => {
+
+  // const fullName = <h1> i am prtozoa </h1>
+
   return (
     <div className='aboutContainer'>
         <p>this is texas. 
             i am here as a react instructor.
              this is our 5th day 
-              i am {person.firstName}
-              i am {person.age} yrs old
+            
+              i am {age} yrs old
              </p>
+  {/* <div>{fullName}</div> */}
+
 
 
     </div>

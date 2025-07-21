@@ -3,23 +3,25 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact"
-import Couter from './components/Couter/Couter';
+import Couter from './components/Counter/Couter';
 import Navbar from './components/navbar/Navbar';
 import Project from "./components/project/Project"
+import Login from './components/login/Login';
+import Home from './components/home/Home';
 
 // import Location from "./components/Location/Location"
 
 function App() {
   const age = 17; 
 
-  function handleClick(){
-    console.log(" button is clicked!")
-    // alert("you have clicked the button")
-  }
+  // function handleClick(){
+  //   console.log(" button is clicked!")
+  //   // alert("you have clicked the button")
+  // }
   return (
   <>
     <Navbar />
-  <div className='container'>
+  {/* <div className='container'>
 
     <h1>my Protfolio</h1>
     <p> i am pratik devkota . i am 16 yrs old. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda rerum sint iusto repellat dolores consequuntur corrupti. Magnam autem eligendi praesentium natus modi voluptate doloremque asperiores cum! Voluptatibus dolor aliquam totam.</p>
@@ -28,13 +30,15 @@ function App() {
     onClick={handleClick}>
     click me
     </button>
-  </div>
+  </div> */}
    {/*routing configuration  */}
    <Routes> 
     <Route path='/contact' element= {<Contact />} />
     <Route path='/' element= {<Couter />} />
-    <Route path='/project' element= {<Project />} />
+    {/* <Route path='/' element= {<Home />} /> */}
+    <Route path='/project/:id' element= {<Project />} />
     <Route path='/about' element= {<About age={age} />} />
+    <Route path='/login' element= {<Login/>} />
    </Routes>
   
   </>

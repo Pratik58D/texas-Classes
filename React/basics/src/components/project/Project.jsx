@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
+import { useParams } from "react-router-dom";
 
 const Project = () => {
+  const { id } = useParams();
   return (
     <div>
-        
-        fawopsjgkljasdjklghjkadh
-        dajkfhdjkghjakhjkeg
-        jhbgajkshjklgihghj
+      <h2>Project Details</h2>
+      <p>You are viewing project with ID: {id}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;

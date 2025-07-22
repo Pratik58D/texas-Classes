@@ -8,6 +8,7 @@ import Navbar from './components/navbar/Navbar';
 import Project from "./components/project/Project"
 import Login from './components/login/Login';
 import Home from './components/home/Home';
+import Product from './components/Product/Product';
 
 // import Location from "./components/Location/Location"
 
@@ -32,13 +33,16 @@ function App() {
     </button>
   </div> */}
    {/*routing configuration  */}
-   <Routes> 
+   <Routes>
+     <Route path='/' element= {<Home />} />
     <Route path='/contact' element= {<Contact />} />
-    <Route path='/' element= {<Couter />} />
-    {/* <Route path='/' element= {<Home />} /> */}
-    <Route path='/project/:id' element= {<Project />} />
+    <Route path='/project' element= {<Project />} />
     <Route path='/about' element= {<About age={age} />} />
     <Route path='/login' element= {<Login/>} />
+    {/* for api integration learning */}
+    
+    <Route path='/product' element= {<Product/>} />
+
    </Routes>
   
   </>

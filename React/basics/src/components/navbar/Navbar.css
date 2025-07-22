@@ -12,6 +12,10 @@
   font-weight: 600;
   font-size: 20px;
 }
+.logo a{
+  text-decoration: none;
+  color: white;
+}
 .navbar-list a {
   text-decoration: none;
   color: white;

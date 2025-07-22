@@ -6,34 +6,42 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
+  // const [error, setError] = useState("");
   const navigate = useNavigate();
 
   //handle Submit
-
   const handleSubmit = (e) => {
     e.preventDefault(); //prevent page reload
+    
+    alert(`submitted: ${email} `)
+    navigate("/")
 
-    if (!email.includes("@")) {
-      setError('Email must include "@"');
-    } else {
-      setError("");
-      alert(`Submitted: ${email}`);
-      navigate("/");
-    }
+    // if (!email.includes("@")) {
+    //   setError('Email must include "@"');
+    // } else {
+    //   setError("");
+    //   alert(`Submitted: ${email}`);
+    //   navigate("/");
+    // }
   };
 
+
+  // onSubmit={handleSubmit}
+
   return (
-    <div className="login-container">
-      <form className="form" onSubmit={handleSubmit}>
+    <div className="login-container" onSubmit={handleSubmit}>
+      <form className="form">
         <h2>Login</h2>
         <div className="email">
           <label>email</label>
           <input
             type="text"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              console.log(e.target);
+              console.log(e.target.value);
+              setEmail(e.target.value);
+            }}
           />
         </div>
 
@@ -44,9 +52,14 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
+
+
+
         </div>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {/* {error && <p style={{ color: "red" }}>{error}</p>} */}
+        
         <button type="submit">LogIn</button>
+      
       </form>
     </div>
   );

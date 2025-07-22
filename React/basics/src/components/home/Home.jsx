@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../navbar/Navbar";
-import profileImg from "../../../src/assets/Pratik.jpg";
-// import "./home.css"
+import profileImg from "../../assets/Pratik.jpg";
+import "./home.css"
 
 const Home = () => {
   return (

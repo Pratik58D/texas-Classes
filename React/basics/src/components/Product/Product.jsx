@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./Product.css";
-// import axios from "axios"
+import axios from "axios"
 
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
-  //   const [loading, setLoading] = useState(true);
-  //   const [error, setError] = useState("");
+   const [products, setProducts] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState("");
 
   // .then() method
 
@@ -18,47 +18,43 @@ const Product = () => {
     //     .then((data) => {
     //       console.log(data.products);
     //       setProducts(data.products);
+
     //     })
     //     .catch((err) => console.error(err));
     // }, []);
    
 
-  
+  // const getData = async () => {
+  //   try {
+  //     const res = await fetch("https://dummyjson.com/products");
+  //     const data = await res.json();
+  //     console.log(data);
+  //     setProducts(data.products);
+  //   } catch (err) {
+  //     console.log(err);
+  //   }
+  // };
 
-
-
-
-  const getData = async () => {
+const getData = async()=>{
     try {
-      const res = await fetch("https://dummyjson.com/products");
-      const data = await res.json();
-      console.log(data);
-      setProducts(data.products);
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-// const getData = async()=>{
-//     try {
-//         const res = await axios.get("https://dummyjson.com/products");
-//         console.log(res.data);
-//         setProducts(res.data.products);
+        const res = await axios.get("https://dummyjson.com/products");
+        console.log(res.data);
+        setProducts(res.data.products);
         
-//     } catch (error) {
-//         console.log(error)  
-//         setError("error on fetching data")     
-//     }finally{
-//       setLoading(false);
-//     }
-// }
+    } catch (error) {
+        console.log(error)  
+        setError("error on fetching data")     
+    }finally{
+      setLoading(false);
+    }
+}
 
   useEffect(()=>{
     getData()
   },[])
 
-  //   if (loading) return <p>Loading...</p>;
-  // if (error) return <p style={{ color: "red" }}>{error}</p>;
+    if (loading) return <p>Loading...</p>;
+  if (error) return <p style={{ color: "red" }}>{error}</p>;
 
 
 

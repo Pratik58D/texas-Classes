@@ -1,5 +1,7 @@
 import React from 'react';
 import "./about.css"
+import Education from './Education';
+import { Outlet } from 'react-router-dom';
 
 
 // person = {
@@ -21,6 +23,10 @@ const About = ({age}) => {
               i am {age} yrs old
              </p>
   {/* <div>{fullName}</div> */}
+
+  <Outlet/>
+
+  
 
 
 

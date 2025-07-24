@@ -9,6 +9,8 @@ import Project from "./components/project/Project"
 import Login from './components/login/Login';
 import Home from './components/home/Home';
 import Product from './components/Product/Product';
+import Education from './components/About/Education';
+import SingleProduct from './components/Product/SingleProduct';
 
 // import Location from "./components/Location/Location"
 
@@ -36,12 +38,16 @@ function App() {
    <Routes>
      <Route path='/' element= {<Home />} />
     <Route path='/contact' element= {<Contact />} />
-    <Route path='/project' element= {<Project />} />
-    <Route path='/about' element= {<About age={age} />} />
+    <Route path='project'  element= {<Project />} />
+    <Route path='/about' element= {<About age={age} />} >
+    <Route path="education" element={<Education/>} />
+    <Route path="hobby" element={<Education/>} />
+    </Route>
     <Route path='/login' element= {<Login/>} />
     {/* for api integration learning */}
     
     <Route path='/product' element= {<Product/>} />
+    <Route path='/product/:id' element= {<SingleProduct/>} />
 
    </Routes>
   

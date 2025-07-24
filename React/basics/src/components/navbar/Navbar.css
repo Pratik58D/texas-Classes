@@ -12,7 +12,7 @@
   font-weight: 600;
   font-size: 20px;
 }
-.logo a{
+.logo a {
   text-decoration: none;
   color: white;
 }
@@ -24,9 +24,11 @@
   border: none;
   padding: 10px 20px;
   background: red;
-  color: white;
   border-radius: 5px;
-  font-weight: 600;
+}
+.navBar button a {
+  text-decoration: none;
+  color: white;
   font-size: 12px;
 }
 .navBar button:hover {

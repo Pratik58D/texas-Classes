@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Product.css";
 import axios from "axios"
+import { Link } from "react-router-dom";
 
 
 const Product = () => {
@@ -60,9 +61,16 @@ const getData = async()=>{
 
 
   return (
-    <div className="product-container">
+    <>
+   
+      <div className="product-container">
       {products.length > 0 &&
         products.map((product) => (
+            <Link
+              to={`/product/${product.id}`}  // Link to the SingleProduct page with the product id
+              key={product.id}
+              style={{ textDecoration: "none" }} // Optional: Remove underline from the link
+            >
           <div className="product-card" key={product.id}>
             <h1>{product.title}</h1>
   
@@ -70,9 +78,12 @@ const getData = async()=>{
             <img src={product.images[0]} alt={product.title} />
             <p>{product.description}</p>
           </div>
+          </Link>
         ))}
-    </div>
+    </div>    
     
+    </>
+  
   )
 };
 

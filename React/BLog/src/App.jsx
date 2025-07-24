@@ -22,6 +22,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
           <Route path="setting" element={<Setting />} />
         </Route>
+        
       </Routes>
     </>
   );
